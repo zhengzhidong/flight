@@ -1,0 +1,242 @@
+$border-color:#ebebeb
+$light-c:#888
+$m-size:0.75rem
+$normal-c:#353535
+$bb-size:1.25rem
+
+.flight-search {
+    padding: 0 5%;
+	background: #FFFFFF;
+    border-top: 1px solid $border-color;
+	.operate {
+		.station {
+			padding: 10px 0px;
+			border-bottom: 1px solid $border-color;
+			.choose-station {
+				float: left;
+				width: 40%;
+				position: relative;
+
+				.station-title {
+					color: $light-c;
+					font-size: $m-size;
+					padding-left: 2px;
+					height: 25px;
+					line-height: 25px;
+				}
+
+				.choose-btn {
+					color: $normal-c;
+					font-size: $bb-size;
+					height: 40px;
+					line-height: 40px;
+					cursor: pointer;
+					position: relative;
+					padding-left: 1px;
+					white-space: nowrap;
+
+					span {
+						overflow:hidden;
+						text-overflow:ellipsis;
+						display: block;
+						@include transition(all 0.2s ease-in-out);
+					}
+
+				}
+
+				.switch-right {
+					@include transform(translateX(150%));
+				}
+
+				.switch-left {
+					@include transform(translateX(-150%));
+				}
+
+				.overturn {
+					@include transform(rotateX(90deg));
+				}
+			}
+
+			.switch {
+				float: left;
+				width: 20%;
+				padding-top: 25px;
+
+				.switch-btn {
+					width: 30px;
+					height: 30px;
+					margin: 0px auto;
+					border-radius: 50%;
+					background: #09bb07 url("img/switch-icon.png") no-repeat center center;
+					background-size: 100% 100%;
+					cursor: pointer;
+				}
+
+				.switch-ratate {
+					@include transform(rotate(180deg));
+					transition: all 0.3s ease-in-out;
+				}
+			}
+			
+		}
+
+		.date, .ticket{
+			padding: 10px 0px;
+			
+			.date-from {
+
+			}
+			
+			.around {
+				margin-right: 5px;
+				float: left;
+				width: 45%;
+				overflow: hidden;
+			}
+
+			.date-to {
+				float: right;
+				width: 45%;
+				display: none;
+				overflow: hidden;
+			}
+
+	        .date-title, .ticket-title {
+	            color: $light-c;
+	            font-size: $m-size;
+	            padding-left: 2px;
+	            height: 25px;
+	            line-height: 25px;
+	        }
+	    
+			.date-region, .ticket-region {
+	            position: relative;
+				padding: 10px 0px 10px 1px;
+				border-bottom: 1px solid $border-color;
+				font-size: $b-size;
+	            height: 41px;
+	            
+	            span {
+	            	white-space: nowrap;
+	            }
+			}
+
+		}
+
+		.filter {
+			padding-bottom: 10px;
+
+			.filter-item {
+				height: 50px;
+				line-height: 50px;
+                float: left;
+                width: 50%;
+			}
+			
+		}
+
+	}
+
+	.search {
+		padding: 20px 0px;
+	}
+	
+	.memberBtn{
+		background: #fceeed;
+		border:1px solid #ee897f;
+		text-align: center;
+		color:#e65749;
+		float:left;
+		width: 45%;
+		padding:10px 0px;
+	}
+
+	.guestBtn{
+		background: #ecf3fd;
+		border:1px solid #7c9dea;
+		text-align: center;
+		color:#4473df;
+		float:right;
+		width: 45%;
+		padding:10px 0px;
+		
+	}
+
+	.history {
+		color: #666666;
+		margin-bottom: 40px;
+
+		.history-title {
+			text-align: center;
+            color: $normal-c;
+            height: 40px;
+            line-height: 40px;
+		}
+
+		.item {
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			cursor: pointer;
+		}
+
+		.active{
+			background:#f8d1cc;
+			color:#09bb07;
+		}
+	}
+}
+#index-page-footer{
+  .tab-item{
+    padding-top: 1.4rem;
+    font-size: .75rem;
+  }
+  .order-tips{
+    background: url('img/order-tips-e.png') no-repeat 50% 5px;
+    background-size: 18px auto;
+  }
+  .order-query{
+    background: url('img/query-order-e.png') no-repeat 50% 5px;
+    background-size: 14px auto;
+  }
+  .query-text{
+    color: $light-c;
+  }
+
+}
+
+
+
+/*add banner imgs*/
+.swiper-container{
+	//height: 8rem;
+	margin-top: 44px;
+
+	.swiper-wrapper{
+		height: 100%;
+	}
+	.swiper-slide{
+		width: 100%;
+		height: 100%;
+
+	}
+	img{
+		display: block!important;
+		max-width: 100%!important;
+		height:auto;
+		//height: 100% !important;
+	}
+}
+.swiper-pagination{
+	height: 20px;
+	bottom: 0!important;
+	text-align: center;
+	width: 100%;
+
+	.swiper-pagination-bullet{
+		background-color: #908375;
+	}
+	.swiper-pagination-bullet-active{
+		background-color: #fff;
+	}
+}
